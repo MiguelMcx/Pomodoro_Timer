@@ -1,0 +1,63 @@
+# Construcción y Gradle
+/build
+.gradle
+/app/build
+/*/build
+gradle-app.setting
+!gradle-wrapper.jar
+
+# Archivos de configuración local (IMPORTANTE: Nunca subir claves API o rutas locales)
+local.properties
+# gradle.properties # Descomenta esto si tienes secretos en tu gradle.properties del proyecto
+
+# Android Studio / IntelliJ IDEA
+.idea/workspace.xml
+.idea/libraries
+.idea/caches
+.idea/modules.xml
+.idea/navEditor.xml
+.idea/assetWizardSettings.xml
+.idea/dictionaries
+.idea/runConfigurations.xml
+.idea/shelf
+.idea/gradle.xml
+.idea/misc.xml
+.idea/compiler.xml
+.idea/jarRepositories.xml
+*.iws
+*.iml
+*.ipr
+
+# Archivos generados por Android
+/captures
+.externalNativeBuild
+.cxx
+*.apk
+*.ap_
+*.aab
+
+# Kotlin y Jetpack Compose
+# Reportes del compilador de Compose (si habilitas las métricas de estabilidad)
+compose_metrics/
+compose-reports/
+
+# Google Services (si usas Firebase)
+# Normalmente el google-services.json de producción se sube, pero si es un proyecto open source, ignóralo.
+# google-services.json
+
+# Sistema Operativo
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Pruebas y Logcat
+logcat.txt
+test-results/
+
+# Inyección de Dependencias (Hilt/Dagger - archivos generados)
+# Generalmente están dentro de /build, pero por seguridad:
+kapt/
