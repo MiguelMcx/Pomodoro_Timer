@@ -28,14 +28,19 @@ import androidx.lifecycle.viewmodel.compose.viewModel
     ) {
         val value = viewModel.currentTime / viewModel.TiempoTotal.toFloat()
 
+        val totalSeconds = viewModel.currentTime/1000
+        val minutes = totalSeconds / 60
+        val reamainingSeconds = totalSeconds % 60
 
+
+        val formattedTime = String.format("%02d:%02d",minutes,reamainingSeconds)
         Box(
             contentAlignment = Alignment.Center,
             modifier = modifier.fillMaxSize()
 
         ) {
             Text(
-                text = (viewModel.currentTime/1000L).toString(),
+                text = formattedTime,
                 fontSize = 44.sp,
                 fontWeight = FontWeight.Bold,
                 color = Color.Black
@@ -70,6 +75,14 @@ import androidx.lifecycle.viewmodel.compose.viewModel
                 )
 
             }
+                Spacer(modifier = Modifier.height(16.dp))
+
+                Button(
+                    onClick = {viewModel.ResetTimer()},
+                ) {
+                    Text(text = "Reset")
+                }
+
                 Spacer(modifier = Modifier.height(16.dp))
                 Button(
                     onClick = {viewModel.longButtomTime()},

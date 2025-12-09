@@ -13,6 +13,8 @@ import kotlinx.coroutines.launch
 class TimerViewModel : ViewModel(){
     var TiempoTotal: Long = 25 * 60 * 1000L
 
+
+
     var currentTime by mutableStateOf(TiempoTotal)
         private set
 
@@ -38,7 +40,7 @@ class TimerViewModel : ViewModel(){
         timerJob?.cancel()
     }
 
-    fun stopTimer(){
+    fun ResetTimer(){
         isTimerRunning = false
         timerJob?.cancel()
         currentTime = TiempoTotal
