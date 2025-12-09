@@ -12,20 +12,17 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
-import com.miguel.pomodoro_timer.ui.theme.Pomodoro_TimerTheme
 import com.miguel.pomodoro_timer.ui.screens.timer.CuentaAtras
+import com.miguel.pomodoro_timer.ui.theme.AppTheme
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContent {
-            Pomodoro_TimerTheme {
+            AppTheme {
                 Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
-    CuentaAtras(
-
-
-    )
+    CuentaAtras()
                 }
             }
         }
@@ -38,7 +35,7 @@ class MainActivity : ComponentActivity() {
 @Composable
 
 fun PomodoroPreview (){
-    Pomodoro_TimerTheme() {
+    AppTheme {
         CuentaAtras()
     }
 }

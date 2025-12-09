@@ -1,5 +1,6 @@
 package com.miguel.pomodoro_timer.ui.screens.timer
 
+import android.text.style.BackgroundColorSpan
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
@@ -21,9 +22,11 @@ import androidx.lifecycle.viewmodel.compose.viewModel
 
 @Composable
     fun CuentaAtras(
+
         viewModel: TimerViewModel = viewModel(),
         modifier: Modifier = Modifier
     ) {
+        
         //val value = viewModel.currentTime / viewModel.TiempoTotal.toFloat()
 
         val totalSeconds = viewModel.currentTime/1000
@@ -68,8 +71,7 @@ import androidx.lifecycle.viewmodel.compose.viewModel
                 )
             ) {
                 Text(text = if(viewModel.isTimerRunning)"Fin"
-                else if (viewModel.currentTime < viewModel.TiempoTotal) "Empezar"
-                else "Reiniciar"
+                else "Empezar"
                 )
 
             }
