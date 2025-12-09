@@ -13,8 +13,6 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.layout.approachLayout
-import androidx.compose.ui.layout.onSizeChanged
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
@@ -26,7 +24,7 @@ import androidx.lifecycle.viewmodel.compose.viewModel
         viewModel: TimerViewModel = viewModel(),
         modifier: Modifier = Modifier
     ) {
-        val value = viewModel.currentTime / viewModel.TiempoTotal.toFloat()
+        //val value = viewModel.currentTime / viewModel.TiempoTotal.toFloat()
 
         val totalSeconds = viewModel.currentTime/1000
         val minutes = totalSeconds / 60
