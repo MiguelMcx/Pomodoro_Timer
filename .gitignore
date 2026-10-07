@@ -61,3 +61,6 @@ test-results/
 # Inyección de Dependencias (Hilt/Dagger - archivos generados)
 # Generalmente están dentro de /build, pero por seguridad:
 kapt/
+
+# IDE
+.idea/
